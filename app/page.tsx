@@ -40,7 +40,7 @@ export default function Home() {
       </div>
 
       <div className="flex m-2 justify-around gap-2">
-        <div className="h-52 border-black border w-48 flex align-middle items-center flex-col rounded-[5px]">
+        <div className="h-52 shadow-sm shadow-black w-48 flex align-middle items-center flex-col rounded-[5px]">
           <Image
             src={"/remera-men.jpg"}
             className="flex align-middle  justify-center items-center"
@@ -74,7 +74,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="h-52 border-black border w-48 flex align-middle items-center flex-col rounded-[5px]">
+        <div className="h-52 w-48 shadow-sm shadow-black flex align-middle items-center flex-col rounded-[5px]">
           <Image
             src={"/remera-men.jpg"}
             className="flex align-middle  justify-center items-center"
@@ -118,8 +118,8 @@ export default function Home() {
         />
       </div>
 
-      <div className="flex m-2 justify-around gap-2">
-        <div className="h-52 border-black border w-48 flex align-middle items-center flex-col rounded-[5px]">
+      <div className="flex  m-2 justify-around gap-2">
+        <div className="shadow-sm shadow-black h-52 w-48 flex align-middle items-center flex-col rounded-[5px]">
           <Image
             src={"/remera-men.jpg"}
             className="flex align-middle  justify-center items-center"
@@ -153,7 +153,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="h-52 border-black border w-48 flex align-middle items-center flex-col rounded-[5px]">
+        <div className="h-52 shadow-sm shadow-black w-48 flex align-middle items-center flex-col rounded-[5px]">
           <Image
             src={"/remera-men.jpg"}
             className="flex align-middle  justify-center items-center"
