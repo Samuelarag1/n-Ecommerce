@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className=" min-h-screen bg-white">
+    <main className="min-h-screen bg-white">
       <div className="bg-black ">
         <p className="text-xs text-center">
           Envios gratis a partir de los 60.000$
@@ -31,6 +31,7 @@ export default function Home() {
         <div className="lg:w-[70%] lg:bg-white lg:min-h-screen lg:border-l-2 lg:border-r-2 lg:border-black"></div>
       </div>
 
+      {/* //! Banner de hombres */}
       <div className="h-40 flex items-center justify-center bg-black">
         <Image
           src={mens}
@@ -40,27 +41,24 @@ export default function Home() {
       </div>
 
       <div className="flex m-2 justify-around gap-2">
-        <div className="h-52 shadow-sm shadow-black w-48 flex align-middle items-center flex-col rounded-[5px]">
+        <div className=" w-48 flex flex-col rounded-[5px] shadow-sm shadow-black overflow-hidden">
           <Image
-            src={"/remera-men.jpg"}
-            className="flex align-middle  justify-center items-center"
+            src="/remera-men.jpg"
+            className="w-full h-auto object-cover"
+            alt="123"
             height={400}
             width={400}
-            alt="123"
           />
-          <div className="w-full flex justify-between items-center m-1 ">
+          <div className="w-full flex justify-between items-center p-1">
             <p className="text-sm text-black text-start">Remera</p>
           </div>
-
           <div className="text-black">
-            <p className="text-xs  overflow-auto h-14 ">
+            <p className="text-xs overflow-auto h-14 p-1">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
-              non! Vel molestiae, iste saepe provident, dolores dolorum earum
-              porro fugiat eveniet a ut eius! Optio consequatur itaque ab
-              repellendus earum?
+              non!
             </p>
           </div>
-          <div className="flex items-center w-[100%] justify-around">
+          <div className="flex items-center w-full justify-around p-1">
             <div className="text-black">
               <p className="text-xs">
                 <span className="font-bold text-xs">$</span>
@@ -68,33 +66,31 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <button className="text-[10px] bg-green-800 text-white p-1 rounded-[25px]">
+              <button className="text-[10px] bg-green-800 text-white p-1 rounded-full">
                 Agregar
               </button>
             </div>
           </div>
         </div>
-        <div className="h-52 w-48 shadow-sm shadow-black flex align-middle items-center flex-col rounded-[5px]">
+
+        <div className=" w-48 flex flex-col rounded-[5px] shadow-sm shadow-black overflow-hidden">
           <Image
-            src={"/remera-men.jpg"}
-            className="flex align-middle  justify-center items-center"
+            src="/remera-men.jpg"
+            className="w-full h-auto object-cover"
+            alt="123"
             height={400}
             width={400}
-            alt="123"
           />
-          <div className="w-full flex justify-between items-center m-1 ">
+          <div className="w-full flex justify-between items-center p-1">
             <p className="text-sm text-black text-start">Remera</p>
           </div>
-
           <div className="text-black">
-            <p className="text-xs  overflow-auto h-14 ">
+            <p className="text-xs overflow-auto h-14 p-1">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
-              non! Vel molestiae, iste saepe provident, dolores dolorum earum
-              porro fugiat eveniet a ut eius! Optio consequatur itaque ab
-              repellendus earum?
+              non!
             </p>
           </div>
-          <div className="flex items-center w-[100%] justify-around">
+          <div className="flex items-center w-full justify-around p-1">
             <div className="text-black">
               <p className="text-xs">
                 <span className="font-bold text-xs">$</span>
@@ -102,7 +98,7 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <button className="text-[10px] bg-green-800 text-white p-1 rounded-[25px]">
+              <button className="text-[10px] bg-green-800 text-white p-1 rounded-full">
                 Agregar
               </button>
             </div>
@@ -110,6 +106,7 @@ export default function Home() {
         </div>
       </div>
 
+      {/* //! Banner de Mujeres */}
       <div className="h-40 align-middle items-center flex bg-black">
         <Image
           src={girls}
@@ -119,27 +116,24 @@ export default function Home() {
       </div>
 
       <div className="flex  m-2 justify-around gap-2">
-        <div className="shadow-sm shadow-black h-52 w-48 flex align-middle items-center flex-col rounded-[5px]">
+        <div className=" w-48 flex flex-col rounded-[5px] shadow-sm shadow-black overflow-hidden">
           <Image
-            src={"/remera-men.jpg"}
-            className="flex align-middle  justify-center items-center"
+            src="/remera-men.jpg"
+            className="w-full h-auto object-cover"
+            alt="123"
             height={400}
             width={400}
-            alt="123"
           />
-          <div className="w-full flex justify-between items-center m-1 ">
+          <div className="w-full flex justify-between items-center p-1">
             <p className="text-sm text-black text-start">Remera</p>
           </div>
-
           <div className="text-black">
-            <p className="text-xs  overflow-auto h-14 ">
+            <p className="text-xs overflow-auto h-14 p-1">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
-              non! Vel molestiae, iste saepe provident, dolores dolorum earum
-              porro fugiat eveniet a ut eius! Optio consequatur itaque ab
-              repellendus earum?
+              non!
             </p>
           </div>
-          <div className="flex items-center w-[100%] justify-around">
+          <div className="flex items-center w-full justify-around p-1">
             <div className="text-black">
               <p className="text-xs">
                 <span className="font-bold text-xs">$</span>
@@ -147,33 +141,31 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <button className="text-[10px] bg-green-800 text-white p-1 rounded-[25px]">
+              <button className="text-[10px] bg-green-800 text-white p-1 rounded-full">
                 Agregar
               </button>
             </div>
           </div>
         </div>
-        <div className="h-52 shadow-sm shadow-black w-48 flex align-middle items-center flex-col rounded-[5px]">
+
+        <div className=" w-48 flex flex-col rounded-[5px] shadow-sm shadow-black overflow-hidden">
           <Image
-            src={"/remera-men.jpg"}
-            className="flex align-middle  justify-center items-center"
+            src="/remera-men.jpg"
+            className="w-full h-auto object-cover"
+            alt="123"
             height={400}
             width={400}
-            alt="123"
           />
-          <div className="w-full flex justify-between items-center m-1 ">
+          <div className="w-full flex justify-between items-center p-1">
             <p className="text-sm text-black text-start">Remera</p>
           </div>
-
           <div className="text-black">
-            <p className="text-xs  overflow-auto h-14 ">
+            <p className="text-xs overflow-auto h-14 p-1">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
-              non! Vel molestiae, iste saepe provident, dolores dolorum earum
-              porro fugiat eveniet a ut eius! Optio consequatur itaque ab
-              repellendus earum?
+              non!
             </p>
           </div>
-          <div className="flex items-center w-[100%] justify-around">
+          <div className="flex items-center w-full justify-around p-1">
             <div className="text-black">
               <p className="text-xs">
                 <span className="font-bold text-xs">$</span>
@@ -181,7 +173,7 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <button className="text-[10px] bg-green-800 text-white p-1 rounded-[25px]">
+              <button className="text-[10px] bg-green-800 text-white p-1 rounded-full">
                 Agregar
               </button>
             </div>
