@@ -27,13 +27,13 @@ export default function Home() {
         <p className="text-lg text-white text-center">Destacados</p>
       </div>
 
-      <div className="lg:w-screen lg:min-h-screen lg:bg-slate-300 lg:flex  lg:justify-center ">
+      <div className="lg:w-screen lg:min-h-screen lg:bg-slate-300 lg:flex  lg:justify-center hidden">
         <div className="lg:w-[70%] lg:bg-white lg:min-h-screen lg:border-l-2 lg:border-r-2 lg:border-black">
           {/* //! Banner de Mujeres */}
           <div className="h-40 align-middle items-center flex bg-black">
             <Image
               src={girls}
-              className="max-h-40 w-screen object-cover"
+              className="max-h-40 w-screen object-cover opacity-60"
               alt="123123"
             />
           </div>
