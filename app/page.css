@@ -1,0 +1,64 @@
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 16rem;
+  /* Ajusta el ancho según sea necesario */
+  background-color: black;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: translateX(100%);
+  /* Oculto a la derecha */
+  opacity: 0;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+  /* Muestra el elemento en su posición */
+  opacity: 1;
+}
+
+.close-button {
+  background-color: white;
+  width: 2.5rem;
+  /* Ajusta según sea necesario */
+  height: 2.5rem;
+  /* Ajusta según sea necesario */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+}
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 16rem;
+  /* Ajusta el ancho según sea necesario */
+  background-color: black;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: translateX(100%);
+  /* Oculto a la derecha */
+  opacity: 0;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+  /* Muestra el elemento en su posición */
+  opacity: 1;
+}
+
+.close-button {
+  background-color: white;
+  width: 2.5rem;
+  /* Ajusta según sea necesario */
+  height: 2.5rem;
+  /* Ajusta según sea necesario */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+}
