@@ -1,8 +1,8 @@
 "use client";
 
-import mens from "../../public/mens.webp";
-import girls from "../../public/girls.png";
-import remera from "../../public/remera-men.jpg";
+import mens from "/public/mens.webp";
+import girls from "/public/girls.png";
+import remera from "/public/remera-men.jpg";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -31,7 +31,7 @@ export default function Home() {
         </div>
 
         <div className="p-4 bg-black m-0">
-          <p className="text-lg text-white text-center">Hombres</p>
+          <p className="text-lg text-white text-center">Niños</p>
         </div>
 
         <div className="lg:w-screen lg:min-h-screen lg:bg-slate-300 lg:flex  lg:justify-center hidden">
@@ -354,16 +354,16 @@ export default function Home() {
               <a href="/" className={`text-xl`}>
                 Inicio
               </a>
-              <a href="/news" className={`text-xl`}>
+              <a href="news" className={`text-xl`}>
                 Novedades
               </a>
-              <a href="/mens" className={`text-xl`}>
+              <a href="mens" className={`text-xl`}>
                 Hombres
               </a>
-              <a href="/women" className={`text-xl`}>
+              <a href="womens" className={`text-xl`}>
                 Mujeres
               </a>
-              <a href="/kids" className={`text-xl`}>
+              <a href="kids" className={`text-xl`}>
                 Niños
               </a>
             </div>
