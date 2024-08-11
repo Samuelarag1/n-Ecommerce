@@ -1,8 +1,8 @@
 "use client";
 
-import mens from "../public/mens.webp";
-import girls from "../public/girls.png";
-import remera from "../public/remera-men.jpg";
+import mens from "../../public/mens.webp";
+import girls from "../../public/girls.png";
+import remera from "../../public/remera-men.jpg";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -31,19 +31,20 @@ export default function Home() {
         </div>
 
         <div className="p-4 bg-black m-0">
-          <p className="text-lg text-white text-center">Destacados</p>
+          <p className="text-lg text-white text-center">Hombres</p>
         </div>
 
         <div className="lg:w-screen lg:min-h-screen lg:bg-slate-300 lg:flex  lg:justify-center hidden">
           <div className="lg:w-[70%] lg:bg-white lg:min-h-screen lg:border-l-2 lg:border-r-2 lg:border-black">
-            {/* //! Banner de Mujeres */}
-            <div className="h-40 align-middle items-center flex bg-black">
+            {/* //! Banner de Hombres 1 */}
+            <div className="h-40 flex items-center justify-center bg-black ">
               <Image
-                src={girls}
-                className="max-h-40 w-screen object-cover opacity-60"
+                src={mens}
+                className="max-h-full max-w-full object-cover opacity-60"
                 alt="123123"
               />
             </div>
+
             <div className="flex m-2 justify-around gap-2 mt-10">
               <div className=" w-48 flex flex-col rounded-[5px] shadow-sm shadow-black overflow-hidden">
                 <Image
@@ -183,10 +184,9 @@ export default function Home() {
           </div>
         </div>
         <div className="lg:hidden">
-          {/* //! Banner de Mujeres */}
           <div className="h-40 flex items-center justify-center bg-black ">
             <Image
-              src={girls}
+              src={mens}
               className="max-h-full max-w-full object-cover opacity-60"
               alt="123123"
             />
@@ -351,16 +351,19 @@ export default function Home() {
 
           <div className="flex flex-col mt-36">
             <div className="flex flex-col h-64 gap-2">
-              <a href="/news" className="text-xl">
+              <a href="/" className={`text-xl`}>
+                Inicio
+              </a>
+              <a href="/news" className={`text-xl`}>
                 Novedades
               </a>
-              <a href="/mens" className="text-xl">
+              <a href="/mens" className={`text-xl`}>
                 Hombres
               </a>
-              <a href="/women" className="text-xl">
+              <a href="/women" className={`text-xl`}>
                 Mujeres
               </a>
-              <a href="/kids" className="text-xl">
+              <a href="/kids" className={`text-xl`}>
                 Niños
               </a>
             </div>
