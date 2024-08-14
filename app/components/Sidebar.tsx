@@ -22,6 +22,30 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       </div>
       <div className="text-center">
         <span className="text-3xl">Titulo</span>
+        <div className="flex justify-center gap-4 mt-5">
+          <div>
+            <Link href="/cart">
+              <Image
+                src={"/cart.png"}
+                width={30}
+                height={30}
+                alt="Carrito"
+                className="hover:cursor-pointer"
+              />
+            </Link>
+          </div>
+          <div>
+            <Link href="/login">
+              <Image
+                src={"/user.png"}
+                width={30}
+                height={30}
+                alt="Usuarios"
+                className="hover:cursor-pointer"
+              />
+            </Link>
+          </div>
+        </div>
         <div className="flex flex-col mt-36">
           <div className="flex flex-col h-64 gap-2">
             <Link href="/" className="text-xl">
