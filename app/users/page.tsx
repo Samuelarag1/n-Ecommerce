@@ -2,11 +2,13 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import ModalAdd from "@/components/Modal/Modal";
+import ModalAdd from "@/components/Modals/ModalAdd/index";
+import ModalConfirmDialog from "@/components/Modals/Modal";
 
 const UsuariosPage = () => {
   const [header, setHeader] = useState("");
   const [showModal, setShowModal] = useState(false);
+  const [showModalDialog, setShowModalDialog] = useState(false);
 
   return (
     <>
@@ -65,7 +67,7 @@ const UsuariosPage = () => {
                   <button
                     onClick={() => {
                       setHeader("Borrar vendedor");
-                      setShowModal(true);
+                      setShowModalDialog(true);
                     }}
                   >
                     <Image
@@ -87,6 +89,17 @@ const UsuariosPage = () => {
           <div className="fixed inset-0 bg-black bg-opacity-50 z-10"></div>
           <div className="fixed z-10 top-52 ml-auto w-full flex flex-col items-center">
             <ModalAdd onHide={() => setShowModal(false)} title={header} />
+          </div>
+        </>
+      )}
+      {showModalDialog && (
+        <>
+          <div className="fixed inset-0 bg-black bg-opacity-50 z-10"></div>
+          <div className="fixed z-10 top-52 ml-auto w-full flex flex-col items-center">
+            <ModalConfirmDialog
+              onHide={() => setShowModalDialog(false)}
+              title={header}
+            />
           </div>
         </>
       )}

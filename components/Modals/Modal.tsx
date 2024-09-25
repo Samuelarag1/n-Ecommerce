@@ -4,7 +4,7 @@ interface IModalProps {
   onHide?: () => void;
   title: string;
 }
-function ModalAdd({ onHide, title }: IModalProps) {
+function ModalConfirmDialog({ onHide, title }: IModalProps) {
   return (
     <div className="h-72 w-80 flex flex-col items-center bg-secondary shadow-xl shadow-black m-2 rounded-xl border border-blue-950 overflow-scroll">
       <button
@@ -21,4 +21,4 @@ function ModalAdd({ onHide, title }: IModalProps) {
   );
 }
 
-export default ModalAdd;
+export default ModalConfirmDialog;
