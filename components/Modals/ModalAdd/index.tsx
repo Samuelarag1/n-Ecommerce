@@ -1,6 +1,6 @@
 "use client";
 import IUser from "@/Models/User";
-import React, { useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 
 interface IModalProps {
   onHide?: () => void;
@@ -9,14 +9,16 @@ interface IModalProps {
 function ModalAdd({ onHide, title }: IModalProps) {
   const [users, setUsers] = useState<IUser>({ name: "", roles: "" });
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { value, name } = e.target;
     setUsers({
       ...users,
       [name]: value,
     });
   };
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData();
 
