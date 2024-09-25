@@ -15,7 +15,7 @@ const News: React.FC = () => {
   const [toggle, setToggle] = useState<boolean>(false);
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-primary">
       <div className="bg-black ">
         <p className="text-xs text-center">
           Envios gratis a partir de los 60.000$

@@ -9,19 +9,12 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   return (
     <div
-      className={`${
-        isOpen
-          ? "absolute top-0 right-0 h-screen w-64 bg-black transition duration-500"
-          : "absolute top-0 right-0 h-screen w-64 bg-black transition-transform duration-500 hidden"
+      className={`fixed top-0 left-0 h-screen w-64 bg-secondary transition-transform duration-500 ease-in-out transform ${
+        isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
-      <div className="bg-white w-10 h-10 rounded-[100%] items-center flex justify-center ml-auto mr-2 mt-2">
-        <button onClick={onClose}>
-          <Image src="/close.png" width={20} height={20} alt="button close" />
-        </button>
-      </div>
       <div className="text-center">
-        <span className="text-3xl">Titulo</span>
+        <span className="text-3xl text-white">Brand Name</span>
         <div className="flex justify-center gap-4 mt-5">
           <div>
             <Link href="/cart">
@@ -48,19 +41,19 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </div>
         <div className="flex flex-col mt-36">
           <div className="flex flex-col h-64 gap-2">
-            <Link href="/" className="text-xl">
+            <Link href="/" className="text-xl text-white">
               Inicio
             </Link>
-            <Link href="/section/news" className="text-xl">
+            <Link href="/section/news" className="text-xl text-white">
               Novedades
             </Link>
-            <Link href="/section/mens" className="text-xl">
+            <Link href="/section/mens" className="text-xl text-white">
               Hombres
             </Link>
-            <Link href="/section/womens" className="text-xl">
+            <Link href="/section/womens" className="text-xl text-white">
               Mujeres
             </Link>
-            <Link href="/section/kids" className="text-xl">
+            <Link href="/section/kids" className="text-xl text-white">
               Niños
             </Link>
           </div>

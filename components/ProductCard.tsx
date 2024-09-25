@@ -21,15 +21,15 @@ const ProductCard: React.FC<ProductCardProps> = ({
         width={400}
       />
       <div className="w-full flex justify-between items-center p-1">
-        <p className="text-sm text-black text-start">{title}</p>
+        <p className="text-sm text-white text-start">{title}</p>
       </div>
-      <div className="text-black">
+      <div className="text-white">
         <p className="text-xs font-bold overflow-auto h-14 p-1">
           S M L XL 2XL 4XL
         </p>
       </div>
       <div className="flex items-center w-full justify-between p-2">
-        <div className="text-black">
+        <div className="text-white">
           <p className="text-xs">
             <span className="font-bold text-xs">$</span>
             {price}
