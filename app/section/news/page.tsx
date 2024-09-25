@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Header from "../../components/Header";
-import Banner from "../../components/Banner";
-import ProductCard from "../../components/ProductCard";
-import Sidebar from "../../components/Sidebar";
+import Header from "../../../components/Header";
+import Banner from "../../../components/Banner";
+import ProductCard from "../../../components/ProductCard";
+import Sidebar from "../../../components/Sidebar";
 import banner2 from "/public/mens/banner2.webp";
 import women2 from "/public/women2.png";
 import women from "/public/women.png";
