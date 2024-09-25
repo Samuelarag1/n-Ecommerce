@@ -9,7 +9,7 @@ const LoginPage = () => {
         <h1 className="text-2xl mt-5">Brand Name</h1>
       </div>
       <div className="text-center text-2xl mb-2 font-bold text-white">
-        <p>Inicio de Sesion para usuarios</p>
+        <p>Inicio de Sesion</p>
       </div>
       <div className="bg-secondary p-8 h-60 rounded-lg shadow-md flex flex-col justify-around">
         <input
@@ -24,7 +24,7 @@ const LoginPage = () => {
         />
         <Link
           className="bg-primary text-textGray py-2 rounded-md flex justify-center"
-          href="/data"
+          href="/admin"
         >
           Ingresar
         </Link>
