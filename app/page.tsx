@@ -11,34 +11,18 @@ import women2 from "/public/women2.png";
 import women from "/public/women.png";
 import men1 from "/public/mens/men1.png";
 import camperas from "/public/camperas.png";
-
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
+import React from "react";
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext,
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
 const Home: React.FC = () => {
   const [toggle, setToggle] = useState<boolean>(false);
-  const settings = {
-    infinite: true,
-    speed: 500,
-    arrow: false,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    swipeToSlide: true,
-    lazyLoad: true,
-    nextArrow: null,
-    cssEase: "linear",
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          lazyLoad: true,
-        },
-      },
-    ],
-  };
+
   return (
     <main className="min-h-screen bg-primary">
       <div className="bg-black ">
@@ -50,12 +34,32 @@ const Home: React.FC = () => {
 
       <div className="lg:hidden">
         <Banner src={banner1} alt="Banner Hombres" />
-        <Slider {...settings} className="m-10 gap-2 flex justify-center">
-          <ProductCard imageSrc={women} title="Remera" price={1500} />
-          <ProductCard imageSrc={women2} title="Remera" price={5200} />
-          <ProductCard imageSrc={men1} title="Remera" price={3500} />
-          <ProductCard imageSrc={camperas} title="Remera" price={500} />
-        </Slider>
+
+        <CarouselProvider
+          naturalSlideWidth={10}
+          naturalSlideHeight={25}
+          totalSlides={4}
+          visibleSlides={2}
+          className="mt-10"
+        >
+          <Slider>
+            <Slide index={0}>
+              <ProductCard imageSrc={women} title="Remera" price={1500} />
+            </Slide>
+            <Slide index={1}>
+              <ProductCard imageSrc={women2} title="Remera" price={5200} />
+            </Slide>
+            <Slide index={2}>
+              <ProductCard imageSrc={men1} title="Remera" price={3500} />
+            </Slide>
+            <Slide index={3}>
+              <ProductCard imageSrc={camperas} title="Remera" price={500} />
+            </Slide>
+          </Slider>
+
+          {/* < {...settings} className="m-10 gap-2 flex justify-center">
+          </> */}
+        </CarouselProvider>
         <Banner src={banner1} alt="Banner Hombres" />
         <div className="flex m-2 justify-around gap-2 mt-10">
           <ProductCard imageSrc={men1} title="Remera" price={500} />
