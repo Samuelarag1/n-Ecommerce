@@ -13,8 +13,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
-      <div className="text-center">
-        <span className="text-3xl text-white">Brand Name</span>
+      <div className="text-center mt-20">
+        <h1 className="text-3xl text-white">Brand Name</h1>
         <div className="flex justify-center gap-4 mt-5">
           <div>
             <Link href="/cart">

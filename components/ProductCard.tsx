@@ -12,33 +12,40 @@ const ProductCard: React.FC<ProductCardProps> = ({
   price,
 }) => {
   return (
-    <div className="w-48 flex flex-col rounded-[5px] shadow-sm shadow-black overflow-hidden">
-      <Image
-        src={imageSrc}
-        className="w-full h-auto object-cover"
-        alt={title}
-        height={400}
-        width={400}
-      />
-      <div className="w-full flex justify-between items-center p-1">
-        <p className="text-sm text-white text-start">{title}</p>
-      </div>
-      <div className="text-white">
-        <p className="text-xs font-bold overflow-auto h-14 p-1">
-          S M L XL 2XL 4XL
-        </p>
-      </div>
-      <div className="flex items-center w-full justify-between p-2">
-        <div className="text-white">
-          <p className="text-xs">
-            <span className="font-bold text-xs">$</span>
-            {price}
-          </p>
+    <div>
+      <div className="ml-2 mr-2 h-96 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+        <div className="bg-red-50 flex rounded-l-md rounded-b-none rounded-r-md h-56 w-fit">
+          <a href="#">
+            <Image
+              objectFit="contain"
+              className="rounded-l-md rounded-r-md rounded-b-none h-[100%]"
+              src={imageSrc}
+              alt="product image"
+            />
+          </a>
         </div>
-        <div>
-          <button className="text-[10px] bg-green-800 text-white p-1 rounded-full">
-            Agregar
-          </button>
+        <div className="ml-2">
+          <a href="#">
+            <h3 className="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+              {title}
+            </h3>
+          </a>
+          <div className="flex items-center">
+            <span className="text-green-500 font-light px-2">600 vendidos</span>
+          </div>
+          <div className="flex items-center justify-between">
+            <span className="text-2xl font-bold text-gray-900 dark:text-white">
+              ${price}
+            </span>
+          </div>
+          <div className="mt-2 relative right-0">
+            <a
+              href="#"
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm p-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Comprar
+            </a>
+          </div>
         </div>
       </div>
     </div>

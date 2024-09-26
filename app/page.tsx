@@ -12,9 +12,33 @@ import women from "/public/women.png";
 import men1 from "/public/mens/men1.png";
 import camperas from "/public/camperas.png";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const Home: React.FC = () => {
   const [toggle, setToggle] = useState<boolean>(false);
-
+  const settings = {
+    infinite: true,
+    speed: 500,
+    arrow: false,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    swipeToSlide: true,
+    lazyLoad: true,
+    nextArrow: null,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          lazyLoad: true,
+        },
+      },
+    ],
+  };
   return (
     <main className="min-h-screen bg-primary">
       <div className="bg-black ">
@@ -26,10 +50,12 @@ const Home: React.FC = () => {
 
       <div className="lg:hidden">
         <Banner src={banner1} alt="Banner Hombres" />
-        <div className="flex m-2 justify-around gap-2 mt-10">
-          <ProductCard imageSrc={women2} title="Remera" price={500} />
-          <ProductCard imageSrc={women} title="Remera" price={500} />
-        </div>
+        <Slider {...settings} className="m-10 gap-2 flex justify-center">
+          <ProductCard imageSrc={women} title="Remera" price={1500} />
+          <ProductCard imageSrc={women2} title="Remera" price={5200} />
+          <ProductCard imageSrc={men1} title="Remera" price={3500} />
+          <ProductCard imageSrc={camperas} title="Remera" price={500} />
+        </Slider>
         <Banner src={banner1} alt="Banner Hombres" />
         <div className="flex m-2 justify-around gap-2 mt-10">
           <ProductCard imageSrc={men1} title="Remera" price={500} />
