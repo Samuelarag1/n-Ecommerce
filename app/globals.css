@@ -18,14 +18,23 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  }
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: sans-serif;
+  /* Asegúrate de tener una fuente definida */
+}
 
+/* Asegúrate de que todas las etiquetas tengan el color definido correctamente */
+h1,
+h2,
+h3,
+p,
+span,
+div {
+  color: rgb(var(--foreground-rgb));
+  /* Aplica el color de texto definido */
+}
 
 @layer utilities {
   .text-balance {
