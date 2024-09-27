@@ -7,10 +7,10 @@ interface BannerProps {
 
 const Banner: React.FC<BannerProps> = ({ src, alt }) => {
   return (
-    <div className="h-40 flex items-center justify-center bg-black">
+    <div className="lg:h-60 h-48 flex items-center justify-center bg-black">
       <Image
         src={src}
-        className="max-h-full max-w-full object-cover opacity-60"
+        className="h-full w-full object-cover  opacity-60"
         alt={alt}
       />
     </div>

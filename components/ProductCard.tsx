@@ -13,12 +13,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   return (
     <div>
-      <div className="ml-2 mr-2 h-96 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+      <div className="ml-2 mr-2 h-96 shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
         <div className="bg-red-50 flex rounded-l-md rounded-b-none rounded-r-md h-56 w-fit">
           <a href="#">
             <Image
-              objectFit="contain"
-              className="rounded-l-md rounded-r-md rounded-b-none h-[100%]"
+              className="rounded-l-md rounded-r-md rounded-b-none h-full object-cover"
               src={imageSrc}
               alt="product image"
             />
