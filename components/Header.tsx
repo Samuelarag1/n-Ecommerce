@@ -7,13 +7,15 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ onToggle }) => {
   return (
     <div className="h-24 bg-primary flex items-center justify-around lg:justify-around lg:h-40">
-      <header>
-        <h1 className="text-xl text-white lg:text-3xl">
-          Nombre
-          <br />
-          <span className="ml-4">de mi tienda</span>
-        </h1>
-      </header>
+      <Link href={"/"}>
+        <header>
+          <h1 className="text-xl text-white lg:text-3xl">
+            Nombre
+            <br />
+            <span className="ml-4">de mi tienda</span>
+          </h1>
+        </header>
+      </Link>
 
       <div className="lg:flex items-center justify-between w-20 hidden">
         <Link href={"/login"}>

@@ -45,6 +45,8 @@ function ProductDetail() {
                     src="https://readymadeui.com/images/laptop5.webp"
                     alt="Product"
                     className="w-3/4 rounded object-cover mx-auto"
+                    width={100}
+                    height={400}
                   />
                 </div>
               </div>
