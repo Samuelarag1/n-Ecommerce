@@ -6,13 +6,13 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ onToggle }) => {
   return (
-    <div className="h-24 bg-primary flex items-center justify-around lg:justify-around lg:h-40">
+    <div className="h-24 bg-primary flex items-center justify-around lg:justify-around lg:h-40 shadow-lg shadow-black border-b-black border-b-4">
       <Link href={"/"}>
         <header>
-          <h1 className="text-xl text-white lg:text-3xl">
+          <h1 className="text-xl text-white lg:text-3xl font-title">
             Nombre
             <br />
-            <span className="ml-4">de mi tienda</span>
+            <span className="ml-4 text-white">de mi tienda</span>
           </h1>
         </header>
       </Link>

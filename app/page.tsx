@@ -23,6 +23,7 @@ import {
   IoChevronForwardCircleSharp,
 } from "react-icons/io5";
 import { useEffect, useState } from "react";
+import Footer from "@/components/Footer";
 
 const Home: React.FC = () => {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -47,16 +48,15 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-third">
-      <div className="bg-black ">
-        <p className="text-xs text-center lg:text-lg">
+    <main className="min-h-screen bg-third w-screen">
+      <div className="bg-black">
+        <p className="text-xs text-center text-white lg:text-lg">
           Envios gratis a partir de los 60.000$
         </p>
       </div>
       <Header onToggle={() => setToggle(!toggle)} />
-
       {/* Mobile Version */}
-      <div className="lg:hidden">
+      <div className="lg:hidden min-h-screen">
         <Banner src={banner1} alt="Banner Hombres" />
 
         <CarouselProvider
@@ -70,12 +70,12 @@ const Home: React.FC = () => {
           <div className="relative">
             <div className="absolute inset-y-0 left-0 flex items-center z-10">
               <ButtonBack className="p-2 rounded-full shadow-lg">
-                <IoChevronBackCircleSharp size={32} />
+                <IoChevronBackCircleSharp size={32} color="white" />
               </ButtonBack>
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center z-10">
               <ButtonNext className="p-2 rounded-full shadow-lg">
-                <IoChevronForwardCircleSharp size={32} />
+                <IoChevronForwardCircleSharp size={32} color="white" />
               </ButtonNext>
             </div>
 
@@ -109,12 +109,12 @@ const Home: React.FC = () => {
           <div className="relative">
             <div className="absolute inset-y-0 left-0 flex items-center z-10">
               <ButtonBack className="p-2 rounded-full shadow-lg">
-                <IoChevronBackCircleSharp size={32} />
+                <IoChevronBackCircleSharp size={32} color="white" />
               </ButtonBack>
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center z-10">
-              <ButtonNext className="p-2 rounded-full shadow-lg">
-                <IoChevronForwardCircleSharp size={32} />
+              <ButtonNext className="p-2 rounded-full shadow-lg ">
+                <IoChevronForwardCircleSharp size={32} color="white" />
               </ButtonNext>
             </div>
 
@@ -135,7 +135,6 @@ const Home: React.FC = () => {
           </div>
         </CarouselProvider>
       </div>
-
       {/* Desktop Version */}
       <div className="lg:w-screen lg:min-h-screen lg:bg-secondary lg:flex lg:justify-center hidden">
         <div className="lg:w-[70%] lg:bg-third lg:min-h-screen ">
@@ -216,8 +215,9 @@ const Home: React.FC = () => {
           </CarouselProvider>
         </div>
       </div>
-
       <Sidebar isOpen={toggle} onClose={() => setToggle(false)} />
+
+      <Footer />
     </main>
   );
 };

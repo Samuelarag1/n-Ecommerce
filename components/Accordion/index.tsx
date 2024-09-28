@@ -19,7 +19,7 @@ const Accordion: React.FC<AccordionProps> = ({ label, link, children }) => {
 
   return (
     <div className="accordion">
-      <div className="flex justify-between items-center m-2 mb-0 mt-0 p-4 h-10">
+      <div className="flex justify-between items-center m-2 mb-0 mt-0 p-4 h-10 font-body">
         {/* Este es el enlace que llevará a la categoría */}
         <Link href={link} className="text-2xl text-white font-semibold">
           {label}
@@ -27,6 +27,7 @@ const Accordion: React.FC<AccordionProps> = ({ label, link, children }) => {
 
         {/* El ícono de la flecha solo controla el acordeón */}
         <IoIosArrowForward
+          color="white"
           size={25}
           className={`cursor-pointer transition-transform duration-300  ${
             isOpen ? "rotate-90" : "rotate-0"

@@ -20,7 +20,12 @@ const config: Config = {
         textGray: "#ADADAD",
         black: "#000000",
       },
+      fontFamily: {
+        title: ["Playfair Display", "serif"],
+        body: ["Lato", "sans-serif"],
+      },
     },
+    darkmode: false,
   },
   plugins: [],
 };

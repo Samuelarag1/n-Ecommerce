@@ -13,7 +13,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   return (
     <div>
-      <div className="ml-2 mr-2 h-96 shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+      <div className="font-body ml-2 mr-2 h-96 shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 rounded-b-none shadow-black">
         <div className="bg-red-50 flex rounded-l-md rounded-b-none rounded-r-md h-56 w-fit">
           <a href="#">
             <Image
