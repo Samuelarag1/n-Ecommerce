@@ -27,7 +27,7 @@ function Footer() {
           </li>
         </ul>
       </div>
-      <div className="flex text-xs justify-around py-10">
+      <div className="flex text-xs justify-around py-8">
         <div className="flex gap-2 flex-col">
           <a href="/about" className="text-gray-500">
             Sobre nosotros

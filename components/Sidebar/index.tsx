@@ -197,15 +197,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           {" "}
           <div className="text-start mt-10 ">
             <div className="flex items-center align-middle">
-              <CiCircleInfo size={20} />
+              <CiCircleInfo size={20} color="gray" />
               <p className="text-xs text-gray-500">Informacion</p>
             </div>
             <p className="text-xs ml-5 text-gray-500">Ayuda</p>
             <p className="text-xs ml-5 text-gray-500">Problema con pago</p>
             <p className="text-xs ml-5 text-gray-500">Devoluciones</p>
           </div>
-          <div className="bg-secondary h-14">
-            <p>
+          <div className="bg-secondary h-14 ">
+            <p className="text-white">
               Todos los derechos reservados
               <br />
               Brand Name
