@@ -161,7 +161,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <hr />
               </ul>
             </Accordion>
-            {/* <hr /> */}
             <Accordion label="Accesorios" link="section/accesories">
               <ul className="font-body text-white list-none flex flex-col gap-1 text-lg">
                 <li>
@@ -174,7 +173,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <hr />
               </ul>
             </Accordion>
-            <div className="w-full h-10 flex justify-around mt-5">
+          </div>
+        </div>
+
+        <div className=" absolute bottom-0 w-full text-center text-sm">
+          {" "}
+          <div className="text-start mt-10 ">
+            <div className="w-full h-10 flex justify-around mt-5 mb-2">
               <Link
                 href={"/login"}
                 className="flex align-middle items-center bg-black p-2 gap-2 justify-center rounded-md "
@@ -190,19 +195,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <p className="text-white">Mi carrito</p>
               </Link>
             </div>
-          </div>
-        </div>
-
-        <div className=" absolute bottom-0 w-full text-center text-sm">
-          {" "}
-          <div className="text-start mt-10 ">
-            <div className="flex items-center align-middle">
-              <CiCircleInfo size={20} color="gray" />
-              <p className="text-xs text-gray-500">Informacion</p>
-            </div>
-            <p className="text-xs ml-5 text-gray-500">Ayuda</p>
-            <p className="text-xs ml-5 text-gray-500">Problema con pago</p>
-            <p className="text-xs ml-5 text-gray-500">Devoluciones</p>
           </div>
           <div className="bg-secondary h-14 ">
             <p className="text-white">

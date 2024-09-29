@@ -23,6 +23,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
       setSelectedSize(size);
     }
   };
+
   return (
     <div>
       <div className="font-body ml-2 mr-2 h-96 shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 rounded-b-none shadow-black">
@@ -53,7 +54,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                     selectedSize === size
                       ? "bg-green-800 text-white text-xs border-2 border-black"
                       : "bg-gray-300 text-black text-xs"
-                  }   rounded-full shrink-0 transition-all`}
+                  } rounded-full shrink-0 transition-all`}
                 >
                   {size}
                 </button>
@@ -65,14 +66,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
               ${price}
             </span>
           </div>
-          <div className="mt-2 relative right-0 flex justify-around align-middle  items-center">
+          <div className="mt-2 relative right-0 flex justify-around align-middle items-center">
             <div className="">
-              <button className="bg-green-800 p-2 rounded-md w-12 flex justify-center border-black border-2 shadow-black shadow-sm hover:bg-green-950 transition ease-in-out delay-100 duration-300">
+              <button className="bg-green-800 p-2 rounded-md w-12 flex justify-center border border-black shadow-lg hover:bg-green-600 transition ease-in-out duration-150">
                 <FaShoppingCart color="white" />
               </button>
             </div>
             <div>
-              <button className="bg-blue-800 p-2 rounded-md w-full text-xs text-white flex justify-center border-black border-2 shadow-black shadow-sm hover:bg-blue-950 transition ease-in-out delay-100 duration-300">
+              <button className="bg-blue-800 p-2 rounded-md w-full text-xs text-white flex justify-center border border-black shadow-lg hover:bg-blue-600 transition ease-in-out duration-150">
                 Comprar
               </button>
             </div>
