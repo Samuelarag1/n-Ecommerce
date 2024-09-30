@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { FaShoppingCart, FaUserAlt } from "react-icons/fa";
 import Accordion from "../Accordion";
-import { GoStarFill } from "react-icons/go";
-import { GiConverseShoe } from "react-icons/gi";
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
@@ -24,11 +22,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       <div className="text-center ">
         <div className="flex flex-col mt-4">
           <div className="flex flex-col gap-2 justify-between text-start">
-            <Accordion label="Hombres" link="section/mens">
+            <Accordion label="Hombres" link="/section/mens">
               <ul className="font-body text-white list-none flex flex-col gap-1 text-lg">
                 <li>
                   <Link
-                    href="section/mens/new"
+                    href="/section/mens/new"
                     className="flex gap-2 items-center"
                   >
                     <p className="hover:underline text-white ml-2">
@@ -38,63 +36,63 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 </li>
                 <li>
                   <Link
-                    href="section/mens/shoes"
+                    href="/section/mens/shoes"
                     className="flex items-center gap-2"
                   >
                     <p className="hover:underline text-white ml-2">Calzado</p>
                   </Link>
                 </li>
                 <li>
-                  <Link href="section/mens/clothes">
+                  <Link href="/section/mens/clothes">
                     <p className="hover:underline text-white ml-2">Ropa</p>
                   </Link>
                 </li>
                 <li>
-                  <Link href="section/mens/accesories">
+                  <Link href="/section/mens/accesories">
                     <p className="hover:underline text-white ml-2">
                       Accesorios
                     </p>
                   </Link>
                 </li>
                 <li>
-                  <Link href="section/mens">
+                  <Link href="/section/mens">
                     <p className="hover:underline text-white">
                       Ver todo Hombre
                     </p>
                   </Link>
                 </li>
-                <hr />
               </ul>
             </Accordion>
+
             {/* <hr /> */}
-            <Accordion label="Mujeres" link="section/womens">
+            <Accordion label="Mujeres" link="/section/womens">
               <ul className="font-body text-white list-none flex flex-col gap-1 text-lg">
                 <li>
-                  <Link href="section/womens/new">
+                  <Link href="/section/womens/new">
                     <p className="hover:underline text-white ml-2">
                       Nuevos ingresos
                     </p>
                   </Link>
                 </li>
                 <li>
-                  <Link href="section/womens/shoes">
+                  <Link href="/section/womens/shoes">
                     <p className="hover:underline text-white ml-2">Calzado</p>
                   </Link>
                 </li>
                 <li>
-                  <Link href="section/womens/clothes">
+                  <Link href="/section/womens/clothes">
                     <p className="hover:underline text-white ml-2">Ropa</p>
                   </Link>
                 </li>
                 <li>
-                  <Link href="section/womens/accesories">
+                  <Link href="/section/womens/accesories">
                     <p className="hover:underline text-white ml-2">
                       Accesorios
                     </p>
                   </Link>
                 </li>
                 <li>
-                  <Link href="section/womens">
+                  <Link href="/section/womens">
                     <p className="hover:underline text-white">
                       Ver todo Mujeres
                     </p>
@@ -104,34 +102,34 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </ul>
             </Accordion>
             {/* <hr /> */}
-            <Accordion label="Niños" link="section/kids">
+            <Accordion label="Niños" link="/section/kids">
               <ul className="font-body text-white list-none flex flex-col gap-1 text-lg">
                 <li>
-                  <Link href="section/kids/new">
+                  <Link href="/section/kids/new">
                     <p className="hover:underline text-white ml-2">
                       Nuevos ingresos
                     </p>
                   </Link>
                 </li>
                 <li>
-                  <Link href="section/kids/shoes">
+                  <Link href="/section/kids/shoes">
                     <p className="hover:underline text-white ml-2">Calzado</p>
                   </Link>
                 </li>
                 <li>
-                  <Link href="section/kids/clothes">
+                  <Link href="/section/kids/clothes">
                     <p className="hover:underline text-white ml-2">Ropa</p>
                   </Link>
                 </li>
                 <li>
-                  <Link href="section/kids/accesories">
+                  <Link href="/section/kids/accesories">
                     <p className="hover:underline text-white ml-2">
                       Accesorios
                     </p>
                   </Link>
                 </li>
                 <li>
-                  <Link href="section/kids">
+                  <Link href="/section/kids">
                     <p className="hover:underline text-white">Ver todo Niños</p>
                   </Link>
                 </li>
@@ -139,32 +137,32 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </ul>
             </Accordion>
             {/* <hr /> */}
-            <Accordion label="Deportes" link="section/sports">
+            <Accordion label="Deportes" link="/section/sports">
               <ul className="font-body text-white list-none flex flex-col gap-1 text-lg">
                 <li>
-                  <Link href="section/sports/new">
+                  <Link href="/section/sports/new">
                     <p className="hover:underline text-white ml-2">
                       Nuevos ingresos
                     </p>
                   </Link>
                 </li>
                 <li>
-                  <Link href="section/sports/shoes">
+                  <Link href="/section/sports/shoes">
                     <p className="hover:underline text-white ml-2">Futbol</p>
                   </Link>
                 </li>
                 <li>
-                  <Link href="section/sports/clothes">
+                  <Link href="/section/sports/clothes">
                     <p className="hover:underline text-white ml-2">Basquet</p>
                   </Link>
                 </li>
                 <li>
-                  <Link href="section/sports/accesories">
+                  <Link href="/section/sports/accesories">
                     <p className="hover:underline text-white ml-2">Tenis</p>
                   </Link>
                 </li>
                 <li>
-                  <Link href="section/sports">
+                  <Link href="/section/sports">
                     <p className="hover:underline text-white">
                       Ver todo en Deportes
                     </p>
@@ -173,10 +171,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <hr />
               </ul>
             </Accordion>
-            <Accordion label="Accesorios" link="section/accesories">
+            <Accordion label="Accesorios" link="/section/accesories">
               <ul className="font-body text-white list-none flex flex-col gap-1 text-lg">
                 <li>
-                  <Link href="section/accesories">
+                  <Link href="/section/accesories">
                     <p className="hover:underline text-white ml-2">
                       Ver todo enAccesorios
                     </p>

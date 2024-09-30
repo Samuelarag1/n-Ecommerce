@@ -19,10 +19,10 @@ const Header: React.FC<HeaderProps> = ({ onToggle }) => {
 
       <div className="lg:flex items-center justify-between w-20 hidden">
         <Link href={"/login"}>
-          <FaUserAlt size={30} />
+          <FaUserAlt size={30} color="white" />
         </Link>
         <Link href={"/cart"}>
-          <FaShoppingCart size={30} />
+          <FaShoppingCart size={30} color="white" />
         </Link>
       </div>
       <label className="lg:hidden">

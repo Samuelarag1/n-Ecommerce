@@ -27,23 +27,21 @@ import Footer from "@/components/Footer";
 
 const Home: React.FC = () => {
   const [toggle, setToggle] = useState<boolean>(false);
-  const [visibleSlides, setVisibleSlides] = useState<number>(2); // Default for mobile
+  const [visibleSlides, setVisibleSlides] = useState<number>(2);
 
-  // Handle responsive number of slides
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setVisibleSlides(4); // 4 slides for larger screens
+        setVisibleSlides(4);
       } else if (window.innerWidth >= 768) {
-        setVisibleSlides(3); // 3 slides for medium screens
+        setVisibleSlides(3);
       } else {
-        setVisibleSlides(2); // 2 slides for small screens
+        setVisibleSlides(2);
       }
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Initialize on load
-
+    handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
