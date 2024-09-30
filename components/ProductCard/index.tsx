@@ -26,7 +26,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
   return (
     <div>
-      <div className="font-body ml-2 mr-2 h-96 shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 rounded-b-none shadow-black">
+      <div className="font-body ml-2 mr-2 h-96 shadow-md rounded-lg max-w-sm bg-gray-800 border-gray-700 rounded-b-none shadow-black">
         <div className="bg-red-50 flex rounded-l-md rounded-b-none rounded-r-md h-56 w-fit">
           <a href="#">
             <Image
@@ -38,7 +38,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         </div>
         <div className="ml-2">
           <a href="#">
-            <h3 className="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+            <h3 className=" font-semibold text-xl tracking-tight text-white">
               {title}
             </h3>
           </a>
@@ -62,9 +62,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             </div>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-xl text-gray-900 dark:text-white">
-              ${price}
-            </span>
+            <span className="text-xl  text-white">${price}</span>
           </div>
           <div className="mt-2 relative right-0 flex justify-around align-middle items-center">
             <div className="">

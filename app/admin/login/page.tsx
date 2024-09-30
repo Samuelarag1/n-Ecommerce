@@ -4,12 +4,12 @@ import Link from "next/link";
 
 const LoginPage = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-primary text-textGray shadow-2xl shadow-black">
+    <div className="flex flex-col justify-center items-center h-screen bg-primary  shadow-2xl shadow-black">
       <div className="absolute h-20 top-0 bg-secondary w-full text-center">
-        <h1 className="text-2xl mt-5">Brand Name</h1>
+        <h1 className="text-2xl mt-5 text-white">Brand Name</h1>
       </div>
       <div className="text-center text-2xl mb-2 font-bold text-white">
-        <p>Inicio de Sesion</p>
+        <p className="text-white">Inicio de Sesion</p>
       </div>
       <div className="bg-secondary p-8 h-60 rounded-lg shadow-md flex flex-col justify-around">
         <input

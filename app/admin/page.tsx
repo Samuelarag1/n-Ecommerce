@@ -4,38 +4,31 @@ import Image from "next/image";
 
 function AdminDashboard() {
   return (
-    <div className="h-screen bg-primary ">
+    <div className="h-screen bg-primary text-white">
       <div className="h-20 bg-secondary text-center shadow-xs shadow-black flex flex-col items-center justify-around">
-        <h1 className="text-xl">BrandName</h1>
+        <h1 className="text-xl text-white font-title">BrandName</h1>
       </div>
 
-      <div className="bg-secondary h-28 flex align-middle items-center justify-center text-center m-2 rounded-lg shadow-md shadow-black mt-16">
-        <p>Panel de administracion para tu comercio</p>
+      <div className="text-white bg-secondary h-28 flex align-middle items-center justify-center text-center m-2 rounded-lg shadow-md shadow-black mt-16">
+        <p className="text-white">Panel de administracion para tu comercio</p>
       </div>
 
       <div className="flex flex-row  justify-around mt-20">
         <Link href={"/admin/users"}>
           <div className="bg-secondary w-40 h-24 rounded-lg shadow-md shadow-black flex flex-col items-center justify-around">
-            <p>Usuarios</p>
+            <p className="text-white">Usuarios</p>
           </div>
         </Link>
         <Link href={"/admin/products"}>
           <div className="bg-secondary w-40 h-24 rounded-lg shadow-md shadow-black flex flex-col items-center justify-around">
-            <p>Productos</p>
-            {/* <Image
-              width={30}
-              src={"/add.png"}
-              height={30}
-              alt="add"
-              className="bg-white rounded-full"
-            /> */}
+            <p className="text-white">Productos</p>
           </div>
         </Link>
       </div>
 
       <Link href={"/admin/banner"}>
         <div className="bg-secondary w-80 h-36 m-auto mt-10 rounded-lg shadow-md shadow-black flex flex-col items-center justify-around">
-          <p>Banner</p>
+          <p className="text-white">Banner</p>
         </div>
       </Link>
       <Link href={"/"}>

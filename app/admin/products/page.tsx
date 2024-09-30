@@ -1,18 +1,21 @@
-// pages/productos.tsx
+// pages/usuarios.tsx
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import ModalAdd from "@/components/Modals/ModalAdd";
+import ModalAdd from "@/components/Modals/ModalAdd/index";
 import ModalConfirmDialog from "@/components/Modals/Modal";
-const ProductosPage = () => {
+import { FaRegEye } from "react-icons/fa";
+
+const ProductsPage = () => {
   const [header, setHeader] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [showModalDialog, setShowModalDialog] = useState(false);
 
+  const handleOnClick = () => {};
   return (
     <>
-      <div className="h-screen bg-primary text-textGray p-8">
-        <h1 className="text-2xl mb-8">Productos</h1>
+      <div className="h-screen bg-primary text-slate-300 p-8 ">
+        <h1 className="text-2xl mb-8 text-center text-white">Productos</h1>
         <div className="flex  justify-center">
           <button
             onClick={() => {
@@ -29,50 +32,26 @@ const ProductosPage = () => {
             />
           </button>
         </div>
-        <table className="w-full text-left">
+        <table className="w-full text-left text-black bg-slate-300 mt-2 text-xs">
           <thead>
             <tr>
               <th className="p-2 border-b">Producto</th>
               <th className="p-2 border-b">Precio</th>
-              <th className="p-2 border-b">Acciones</th>
+              <th className="p-2 border-b">Stock</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="p-2 border-b">Producto 1</td>
-              <td className="p-2 border-b">$100</td>
+              <td className="p-2 border-b">Remera</td>
+              <td className="p-2 border-b">$1500</td>
+              <td className="p-2 border-b">20</td>
               <td className="p-2 border-b">
-                <div className="flex">
-                  <button
-                    className="mr-2"
-                    onClick={() => {
-                      setHeader("Editar producto");
-                      setShowModal(true);
-                    }}
-                  >
-                    <Image
-                      alt="add"
-                      src="/edit.png"
-                      height={20}
-                      width={20}
-                      className="hover:cursor-pointer"
-                    />
-                  </button>
-                  <button
-                    onClick={() => {
-                      setHeader("Borrar producto");
-                      setShowModalDialog(true);
-                    }}
-                  >
-                    <Image
-                      alt="delete"
-                      src="/trash.png"
-                      height={20}
-                      width={20}
-                      className="hover:cursor-pointer"
-                    />
-                  </button>
-                </div>
+                <button
+                  onClick={handleOnClick}
+                  className="bg-primary p-1 w-12 h-8 rounded-xl flex items-center justify-center"
+                >
+                  <FaRegEye size={20} color="white" />
+                </button>
               </td>
             </tr>
           </tbody>
@@ -101,4 +80,4 @@ const ProductosPage = () => {
   );
 };
 
-export default ProductosPage;
+export default ProductsPage;
