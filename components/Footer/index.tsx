@@ -6,8 +6,10 @@ function Footer() {
   return (
     <footer className="bg-secondary h-56 w-full">
       <div className="flex justify-around bg-black h-10 items-center">
-        <p className="text-white font-body text-lg">Iniciar sesión</p>
-        <p className="font-body text-white text-lg">Tu carrito (0)</p>
+        <a href="/login" className="text-white font-body text-lg">
+          Iniciar sesión
+        </a>
+        <p className="font-body text-white text-lg">Tu carrito (3)</p>
       </div>
 
       <div className="text-white mt-5">

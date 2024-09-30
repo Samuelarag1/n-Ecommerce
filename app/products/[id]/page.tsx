@@ -3,6 +3,8 @@ import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import React, { useState } from "react";
 import Image from "next/image";
+import Footer from "@/components/Footer";
+import womenImg from "/public/women.png";
 interface IProductsDetailProps {
   name?: string;
   solded?: string;
@@ -42,7 +44,7 @@ function ProductDetail() {
               <div className="lg:col-span-3 w-full lg:sticky top-0 text-center">
                 <div className="px-4 py-10 rounded-lg shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]">
                   <Image
-                    src="https://readymadeui.com/images/laptop5.webp"
+                    src={womenImg}
                     alt="Product"
                     className="w-3/4 rounded object-cover mx-auto"
                     width={100}
@@ -53,49 +55,17 @@ function ProductDetail() {
 
               <div className="lg:col-span-2">
                 <h2 className="text-2xl font-extrabold text-gray-800">
-                  Acer Aspire Pro 12 | Laptop
+                  Vestido largo
                 </h2>
 
                 <div className="flex space-x-2 mt-4">
-                  <h4 className="text-gray-800 text-base">500 Vendidas</h4>
+                  <h4 className="text-gray-800 text-base">30 ventas</h4>
                 </div>
 
                 <div className="flex flex-wrap gap-4 mt-8">
-                  <p className="text-gray-800 text-3xl font-bold">$1200</p>
+                  <p className="text-gray-800 text-3xl font-bold">$22.000</p>
                 </div>
 
-                {/* <div className="mt-8">
-                  <h3 className="text-xl font-bold text-gray-800">
-                    Selecciona tu talle
-                  </h3>
-                  <div className="flex flex-wrap gap-3 mt-4">
-                    <button
-                      type="button"
-                      className="w-10 h-10 bg-black border-2 border-white hover:border-gray-800 rounded-full shrink-0 transition-all checked:bg-black"
-                    >
-                      S
-                    </button>
-                    <button
-                      type="button"
-                      className="w-10 h-10 bg-gray-300 border-2 text-black border-white hover:border-gray-800 rounded-full shrink-0 transition-all"
-                    >
-                      M
-                    </button>
-                    <button
-                      type="button"
-                      className="w-10 h-10 bg-gray-100 border-2 text-black border-white hover:border-gray-800 rounded-full shrink-0 transition-all"
-                    >
-                      L
-                    </button>
-                    <button
-                      type="button"
-                      className="w-10 h-10 bg-blue-400 text-black border-2 border-white hover:border-gray-800 rounded-full shrink-0 transition-all"
-                    >
-                      XL
-                    </button>
-                  </div>
-
-                </div> */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-gray-800">
                     Selecciona tu talle
@@ -117,7 +87,7 @@ function ProductDetail() {
                     ))}
                     <div>
                       <span className="text-red-500 text-md font-semibold">
-                        22 disponibles
+                        10 disponibles
                       </span>
                     </div>
                   </div>
@@ -140,6 +110,7 @@ function ProductDetail() {
             </div>
           </div>
         </div>
+        <Footer />
       </main>
     </>
   );

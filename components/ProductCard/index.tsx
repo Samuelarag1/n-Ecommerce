@@ -28,7 +28,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     <div>
       <div className="font-body ml-2 mr-2 h-96 shadow-md rounded-lg max-w-sm bg-gray-800 border-gray-700 rounded-b-none shadow-black">
         <div className="bg-red-50 flex rounded-l-md rounded-b-none rounded-r-md h-56 w-fit">
-          <a href="#">
+          <a href="/products/1">
             <Image
               className="rounded-l-md rounded-r-md rounded-b-none h-full object-cover"
               src={imageSrc}
