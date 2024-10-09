@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FaShoppingCart, FaUserAlt } from "react-icons/fa";
 import Accordion from "../Accordion";
 interface SidebarProps {
@@ -14,9 +15,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       }`}
     >
       <div className="bg-secondary h-40 text-center flex flex-col justify-center items-center align-middle border-b-black border-b-4">
-        <h1 className="text-3xl text-white font-title">Brand Name</h1>
+        <h1 className="text-3xl text-white font-title">
+          Importaciones Catamarca
+        </h1>
         <div className="flex justify-center gap-4 mt-5 font-body text-xs text-white">
-          Since 1999
+          <Image width={30} height={30} src={"/cart.png"} alt="icon" />
         </div>
       </div>
       <div className="text-center ">
@@ -210,7 +213,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <p className="text-white">
               Todos los derechos reservados
               <br />
-              Brand Name
+              Importaciones Catamarca
             </p>
           </div>
         </div>

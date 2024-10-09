@@ -18,7 +18,7 @@ const News: React.FC = () => {
     <main className="min-h-screen bg-primary">
       <div className="bg-black ">
         <p className="text-xs text-center">
-          Envios gratis a partir de los 60.000$
+          Envios gratis a partir de los 80.000$
         </p>
       </div>
       <Header onToggle={() => setToggle(!toggle)} />

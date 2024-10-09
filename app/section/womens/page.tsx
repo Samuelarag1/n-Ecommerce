@@ -53,7 +53,7 @@ const Home: React.FC = () => {
     <main className="min-h-screen bg-third w-screen">
       <div className="bg-black">
         <p className="text-xs text-center text-white lg:text-lg">
-          Envios gratis a partir de los 60.000$
+          Envios gratis a partir de los 80.000$
         </p>
       </div>
       <Header onToggle={() => setToggle(!toggle)} />

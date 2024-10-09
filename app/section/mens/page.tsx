@@ -11,12 +11,6 @@ import Sidebar from "../../../components/Sidebar";
 import banner1 from "/public/mens/banner1.jpeg";
 import banner2 from "/public/mens/banner2.webp";
 
-//? ImagesCard
-
-import men1 from "/public/mens/men1.png";
-import men2 from "/public/mens/men2.webp";
-import men3 from "/public/mens/men3.webp";
-import men4 from "/public/mens/men4.webp";
 import {
   ButtonBack,
   ButtonNext,
@@ -29,12 +23,24 @@ import {
   IoChevronForwardCircleSharp,
 } from "react-icons/io5";
 import Footer from "@/components/Footer";
+import IProduct from "@/Models/Products";
 
 const Home: React.FC = () => {
   const [toggle, setToggle] = useState<boolean>(false);
   const [visibleSlides, setVisibleSlides] = useState<number>(2);
+  const [products, setProducts] = useState<IProduct[]>();
+
+  const getAllProducts = async () => {
+    const response = await fetch("http://localhost:3001/products/latest");
+
+    const data = await response.json();
+
+    setProducts(data);
+    console.log(data);
+  };
 
   useEffect(() => {
+    getAllProducts();
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setVisibleSlides(4);
@@ -53,7 +59,7 @@ const Home: React.FC = () => {
     <main className="min-h-screen bg-third w-screen">
       <div className="bg-black">
         <p className="text-xs text-center text-white lg:text-lg">
-          Envios gratis a partir de los 60.000$
+          Envios gratis a partir de los 80.000$
         </p>
       </div>
       <Header onToggle={() => setToggle(!toggle)} />
@@ -82,18 +88,21 @@ const Home: React.FC = () => {
             </div>
 
             <Slider className="overflow-hidden m-8">
-              <Slide index={0}>
-                <ProductCard imageSrc={men2} title="Remera" price={1500} />
-              </Slide>
-              <Slide index={1}>
-                <ProductCard imageSrc={men3} title="Remera" price={5200} />
-              </Slide>
-              <Slide index={2}>
-                <ProductCard imageSrc={men1} title="Remera" price={3500} />
-              </Slide>
-              <Slide index={3}>
-                <ProductCard imageSrc={men4} title="Remera" price={500} />
-              </Slide>
+              {products?.length && products?.length > 0 ? (
+                products?.map((product, index) => (
+                  <Slide key={index} index={index}>
+                    <ProductCard
+                      id={product.id}
+                      imageSrc={product.imageUrl}
+                      title={product.name}
+                      price={product.price}
+                      brand={product.brand}
+                    />
+                  </Slide>
+                ))
+              ) : (
+                <p>No hay productos disponibles</p>
+              )}
             </Slider>
           </div>
         </CarouselProvider>
@@ -121,18 +130,21 @@ const Home: React.FC = () => {
             </div>
 
             <Slider className="overflow-hidden m-8">
-              <Slide index={0}>
-                <ProductCard imageSrc={men2} title="Remera" price={1500} />
-              </Slide>
-              <Slide index={1}>
-                <ProductCard imageSrc={men3} title="Remera" price={5200} />
-              </Slide>
-              <Slide index={2}>
-                <ProductCard imageSrc={men1} title="Remera" price={3500} />
-              </Slide>
-              <Slide index={3}>
-                <ProductCard imageSrc={men4} title="Remera" price={500} />
-              </Slide>
+              {products?.length && products?.length > 0 ? (
+                products?.map((product, index) => (
+                  <Slide key={index} index={index}>
+                    <ProductCard
+                      id={product.id}
+                      imageSrc={product.imageUrl}
+                      title={product.name}
+                      price={product.price}
+                      brand={product.brand}
+                    />
+                  </Slide>
+                ))
+              ) : (
+                <p>No hay productos disponibles</p>
+              )}
             </Slider>
           </div>
         </CarouselProvider>
@@ -162,18 +174,21 @@ const Home: React.FC = () => {
               </div>
 
               <Slider className="overflow-hidden m-8">
-                <Slide index={0}>
-                  <ProductCard imageSrc={men2} title="Remera" price={1500} />
-                </Slide>
-                <Slide index={1}>
-                  <ProductCard imageSrc={men3} title="Remera" price={5200} />
-                </Slide>
-                <Slide index={2}>
-                  <ProductCard imageSrc={men1} title="Remera" price={3500} />
-                </Slide>
-                <Slide index={3}>
-                  <ProductCard imageSrc={men4} title="Remera" price={500} />
-                </Slide>
+                {products?.length && products?.length > 0 ? (
+                  products?.map((product, index) => (
+                    <Slide key={index} index={index}>
+                      <ProductCard
+                        id={product.id}
+                        imageSrc={product.imageUrl}
+                        title={product.name}
+                        price={product.price}
+                        brand={product.brand}
+                      />
+                    </Slide>
+                  ))
+                ) : (
+                  <p>No hay productos disponibles</p>
+                )}
               </Slider>
             </div>
           </CarouselProvider>
@@ -200,18 +215,21 @@ const Home: React.FC = () => {
               </div>
 
               <Slider className="overflow-hidden m-8">
-                <Slide index={0}>
-                  <ProductCard imageSrc={men2} title="Remera" price={1500} />
-                </Slide>
-                <Slide index={1}>
-                  <ProductCard imageSrc={men3} title="Remera" price={5200} />
-                </Slide>
-                <Slide index={2}>
-                  <ProductCard imageSrc={men1} title="Remera" price={3500} />
-                </Slide>
-                <Slide index={3}>
-                  <ProductCard imageSrc={men4} title="Remera" price={500} />
-                </Slide>
+                {products?.length && products?.length > 0 ? (
+                  products?.map((product, index) => (
+                    <Slide key={index} index={index}>
+                      <ProductCard
+                        id={product.id}
+                        imageSrc={product.imageUrl}
+                        title={product.name}
+                        price={product.price}
+                        brand={product.brand}
+                      />
+                    </Slide>
+                  ))
+                ) : (
+                  <p>No hay productos disponibles</p>
+                )}
               </Slider>
             </div>
           </CarouselProvider>

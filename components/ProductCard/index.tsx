@@ -1,18 +1,23 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 
 interface ProductCardProps {
+  id: string;
   imageSrc: string | StaticImageData;
   title: string;
-  price: number;
+  price: string;
+  brand: string;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
+  id,
   imageSrc,
   title,
   price,
+  brand,
 }) => {
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
 
@@ -25,57 +30,30 @@ const ProductCard: React.FC<ProductCardProps> = ({
   };
 
   return (
-    <div>
-      <div className="font-body ml-2 mr-2 h-96 shadow-md rounded-lg max-w-sm bg-gray-800 border-gray-700 rounded-b-none shadow-black">
-        <div className="bg-red-50 flex rounded-l-md rounded-b-none rounded-r-md h-56 w-fit">
-          <a href="/products/1">
-            <Image
-              className="rounded-l-md rounded-r-md rounded-b-none h-full object-cover"
-              src={imageSrc}
-              alt="product image"
-            />
-          </a>
+    <div className="max-w-sm w-full bg-gray-800 border border-gray-700 rounded-lg shadow-lg overflow-hidden">
+      <Link href={`/products/${id}`}>
+        <div className="relative h-48 w-full">
+          <Image
+            src={imageSrc}
+            layout="fill"
+            objectFit="cover"
+            alt="Product Image"
+          />
         </div>
-        <div className="ml-2">
-          <a href="#">
-            <h3 className=" font-semibold text-xl tracking-tight text-white">
-              {title}
-            </h3>
-          </a>
-          <div className="flex flex-col items-start">
-            <p className="font-body text-xs font-bold text-gray-400">Marca</p>
-            <div className="flex flex-wrap gap-1 mt-2">
-              {["S", "M", "L", "XL"].map((size) => (
-                <button
-                  key={size}
-                  type="button"
-                  onClick={() => toggleSize(size)}
-                  className={`w-6 h-6 ${
-                    selectedSize === size
-                      ? "bg-green-800 text-white text-xs border-2 border-black"
-                      : "bg-gray-300 text-black text-xs"
-                  } rounded-full shrink-0 transition-all`}
-                >
-                  {size}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className="flex items-center justify-between">
-            <span className="text-xl  text-white">${price}</span>
-          </div>
-          <div className="mt-2 relative right-0 flex justify-around align-middle items-center">
-            <div className="">
-              <button className="bg-green-800 p-2 rounded-md w-12 flex justify-center border border-black shadow-lg hover:bg-green-600 transition ease-in-out duration-150">
-                <FaShoppingCart color="white" />
-              </button>
-            </div>
-            <div>
-              <button className="bg-blue-800 p-2 rounded-md w-full text-xs text-white flex justify-center border border-black shadow-lg hover:bg-blue-600 transition ease-in-out duration-150">
-                Comprar
-              </button>
-            </div>
-          </div>
+      </Link>
+      <div className="p-4 flex flex-col justify-between">
+        <div>
+          <h3 className="text-xl font-semibold text-white">{title}</h3>
+          <p className="text-sm font-bold text-gray-400">{brand}</p>
+          <span className="text-xl text-white">${price}</span>
+        </div>
+        <div className="flex justify-between mt-4">
+          <button className="bg-green-800 p-2 rounded-md flex items-center justify-center border border-black shadow-lg hover:bg-green-600 transition duration-150">
+            <FaShoppingCart className="text-white" />
+          </button>
+          <button className="bg-blue-800 p-2 rounded-md w-full ml-2 text-xs text-white flex justify-center border border-black shadow-lg hover:bg-blue-600 transition duration-150">
+            <Link href={`/products/${id}`}>Comprar</Link>
+          </button>
         </div>
       </div>
     </div>

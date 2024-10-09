@@ -17,13 +17,17 @@ function Footer() {
         <ul className="list-none text-xs flex justify-around mt-2">
           <li className="text-white flex items-center">
             <TiSocialInstagram color="white" size={20} />
-            <a href="https://www.instagram.com" className="ml-2">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/_importacionescat/"
+              className="ml-2"
+            >
               Instagram
             </a>
           </li>
           <li className="text-white flex items-center">
             <IoLogoWhatsapp color="white" size={20} />
-            <a href="https://wa.me/yourwhatsappnumber" className="ml-2">
+            <a target="_blank" href="https://wa.me/3834266840" className="ml-2">
               Whatsapp
             </a>
           </li>
