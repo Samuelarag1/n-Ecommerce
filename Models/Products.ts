@@ -1,12 +1,13 @@
+import ISizeStock from "./SizeStock";
+
 export default interface IProduct {
-  id: string;
+  id?: string;
   name: string;
   price: string;
-  size: "XS" | "S" | "M" | "L" | "XL" | "2XL" | "4XL";
+  sizes: ISizeStock[];
   brand: string;
   discount: number;
-  stock: number;
-  categorie: "Deportivo" | "Hombre" | "Mujer" | "Nino";
+  categorie: "Deportivo" | "Hombre" | "Mujer" | "Nino" | "";
   subCategorie: "Nuevos Ingresos" | "Calzados" | "Ropa" | "Accesorios" | "";
   imageUrl: string;
 }

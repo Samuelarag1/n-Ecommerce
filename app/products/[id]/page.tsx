@@ -101,13 +101,13 @@ function ProductDetail() {
                         {size}
                       </button>
                     ))}
-                    <div>
+                    {/* <div>
                       <span className="text-red-500 text-md font-semibold">
                         {product?.stock
-                          ? `${product.stock} disponibles`
+                          ? `${product?.stock} disponibles`
                           : "No hay stock"}
                       </span>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-4 mt-8">
