@@ -18,7 +18,7 @@ const News: React.FC = () => {
     <main className="min-h-screen bg-primary">
       <div className="bg-black ">
         <p className="text-xs text-center">
-          Envios gratis a partir de los 60.000$
+          Envios gratis a partir de los 80.000$
         </p>
       </div>
       <Header onToggle={() => setToggle(!toggle)} />
@@ -26,13 +26,33 @@ const News: React.FC = () => {
       <div className="lg:hidden">
         <Banner src={banner2} alt="Banner Hombres" />
         <div className="flex m-2 justify-around gap-2 mt-10">
-          <ProductCard imageSrc={women2} title="Remera" price={500} />
-          <ProductCard imageSrc={women} title="Remera" price={500} />
+          <ProductCard
+            imageSrc={women2}
+            title="Remera"
+            price={"500"}
+            brand="brand"
+          />
+          <ProductCard
+            imageSrc={women}
+            title="Remera"
+            price={"500"}
+            brand="brand"
+          />
         </div>
         <Banner src={banner2} alt="Banner Hombres" />
         <div className="flex m-2 justify-around gap-2 mt-10">
-          <ProductCard imageSrc={men1} title="Remera" price={500} />
-          <ProductCard imageSrc={camperas} title="Remera" price={500} />
+          <ProductCard
+            imageSrc={men1}
+            title="Remera"
+            price={"500"}
+            brand="brand"
+          />
+          <ProductCard
+            imageSrc={camperas}
+            title="Remera"
+            price={"500"}
+            brand="brand"
+          />
         </div>
       </div>
 
@@ -40,13 +60,33 @@ const News: React.FC = () => {
         <div className="lg:w-[70%] lg:bg-white lg:min-h-screen lg:border-l-2 lg:border-r-2 lg:border-black">
           <Banner src={banner2} alt="Banner Hombres" />
           <div className="flex m-2 justify-around gap-2 mt-10">
-            <ProductCard imageSrc={women2} title="Remera" price={500} />
-            <ProductCard imageSrc={women} title="Remera" price={500} />
+            <ProductCard
+              imageSrc={women2}
+              title="Remera"
+              price={"500"}
+              brand="brand"
+            />
+            <ProductCard
+              imageSrc={women}
+              title="Remera"
+              price={"500"}
+              brand="brand"
+            />
           </div>
           <Banner src={banner2} alt="Banner Hombres" />
           <div className="flex m-2 justify-around gap-2 mt-10">
-            <ProductCard imageSrc={men1} title="Remera" price={500} />
-            <ProductCard imageSrc={camperas} title="Remera" price={500} />
+            <ProductCard
+              imageSrc={men1}
+              title="Remera"
+              price={"500"}
+              brand="brand"
+            />
+            <ProductCard
+              imageSrc={camperas}
+              title="Remera"
+              price={"500"}
+              brand="brand"
+            />
           </div>
         </div>
       </div>

@@ -1,8 +1,13 @@
+import ISizeStock from "./SizeStock";
+
 export default interface IProduct {
-  id?: number;
+  id?: string;
   name: string;
   price: string;
-  discount: string;
+  sizes: ISizeStock[];
   brand: string;
-  categorie: string;
+  discount: number;
+  categorie: "Deportivo" | "Hombre" | "Mujer" | "Nino" | "";
+  subCategorie: "Nuevos Ingresos" | "Calzados" | "Ropa" | "Accesorios" | "";
+  imageUrl: string;
 }
