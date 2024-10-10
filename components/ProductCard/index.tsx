@@ -7,7 +7,7 @@ interface ProductCardProps {
   id?: string;
   imageSrc: string | StaticImageData;
   title: string;
-  price: string | number;
+  price: string;
   brand: string;
 }
 

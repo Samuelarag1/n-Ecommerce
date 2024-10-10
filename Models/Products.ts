@@ -3,7 +3,7 @@ import ISizeStock from "./SizeStock";
 export default interface IProduct {
   id?: string;
   name: string;
-  price: string | number;
+  price: string;
   sizes: ISizeStock[];
   brand: string;
   discount: number;

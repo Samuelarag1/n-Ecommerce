@@ -29,13 +29,13 @@ const News: React.FC = () => {
           <ProductCard
             imageSrc={women2}
             title="Remera"
-            price={500}
+            price={"500"}
             brand="brand"
           />
           <ProductCard
             imageSrc={women}
             title="Remera"
-            price={500}
+            price={"500"}
             brand="brand"
           />
         </div>
@@ -44,13 +44,13 @@ const News: React.FC = () => {
           <ProductCard
             imageSrc={men1}
             title="Remera"
-            price={500}
+            price={"500"}
             brand="brand"
           />
           <ProductCard
             imageSrc={camperas}
             title="Remera"
-            price={500}
+            price={"500"}
             brand="brand"
           />
         </div>
@@ -63,13 +63,13 @@ const News: React.FC = () => {
             <ProductCard
               imageSrc={women2}
               title="Remera"
-              price={500}
+              price={"500"}
               brand="brand"
             />
             <ProductCard
               imageSrc={women}
               title="Remera"
-              price={500}
+              price={"500"}
               brand="brand"
             />
           </div>
@@ -78,13 +78,13 @@ const News: React.FC = () => {
             <ProductCard
               imageSrc={men1}
               title="Remera"
-              price={500}
+              price={"500"}
               brand="brand"
             />
             <ProductCard
               imageSrc={camperas}
               title="Remera"
-              price={500}
+              price={"500"}
               brand="brand"
             />
           </div>

@@ -99,7 +99,7 @@ const Home: React.FC = () => {
                 <ProductCard
                   imageSrc={kids1}
                   title="Remera"
-                  price={1500}
+                  price={"1500"}
                   brand="brand"
                 />
               </Slide>
@@ -107,7 +107,7 @@ const Home: React.FC = () => {
                 <ProductCard
                   imageSrc={kids2}
                   title="Remera"
-                  price={5200}
+                  price={"5200"}
                   brand="brand"
                 />
               </Slide>
@@ -115,7 +115,7 @@ const Home: React.FC = () => {
                 <ProductCard
                   imageSrc={kids3}
                   title="Remera"
-                  price={3500}
+                  price={"3500"}
                   brand="brand"
                 />
               </Slide>
@@ -123,7 +123,7 @@ const Home: React.FC = () => {
                 <ProductCard
                   imageSrc={kids4}
                   title="Remera"
-                  price={500}
+                  price={"500"}
                   brand="brand"
                 />
               </Slide>
@@ -158,7 +158,7 @@ const Home: React.FC = () => {
                 <ProductCard
                   imageSrc={kids3}
                   title="Remera"
-                  price={3500}
+                  price={"3500"}
                   brand="brand"
                 />
               </Slide>
@@ -166,7 +166,7 @@ const Home: React.FC = () => {
                 <ProductCard
                   imageSrc={kids4}
                   title="Remera"
-                  price={500}
+                  price={"500"}
                   brand="brand"
                 />
               </Slide>
@@ -174,7 +174,7 @@ const Home: React.FC = () => {
                 <ProductCard
                   imageSrc={kids1}
                   title="Remera"
-                  price={1500}
+                  price={"1500"}
                   brand="brand"
                 />
               </Slide>
@@ -182,7 +182,7 @@ const Home: React.FC = () => {
                 <ProductCard
                   imageSrc={kids2}
                   title="Remera"
-                  price={5200}
+                  price={"5200"}
                   brand="brand"
                 />
               </Slide>
@@ -219,7 +219,7 @@ const Home: React.FC = () => {
                   <ProductCard
                     imageSrc={kids1}
                     title="Remera"
-                    price={1500}
+                    price={"1500"}
                     brand="brand"
                   />
                 </Slide>
@@ -227,7 +227,7 @@ const Home: React.FC = () => {
                   <ProductCard
                     imageSrc={kids2}
                     title="Remera"
-                    price={5200}
+                    price={"5200"}
                     brand="brand"
                   />
                 </Slide>
@@ -235,7 +235,7 @@ const Home: React.FC = () => {
                   <ProductCard
                     imageSrc={kids3}
                     title="Remera"
-                    price={3500}
+                    price={"3500"}
                     brand="brand"
                   />
                 </Slide>
@@ -243,7 +243,7 @@ const Home: React.FC = () => {
                   <ProductCard
                     imageSrc={kids4}
                     title="Remera"
-                    price={500}
+                    price={"500"}
                     brand="brand"
                   />
                 </Slide>
@@ -277,7 +277,7 @@ const Home: React.FC = () => {
                   <ProductCard
                     imageSrc={kids1}
                     title="Remera"
-                    price={1500}
+                    price={"1500"}
                     brand="brand"
                   />
                 </Slide>
@@ -285,7 +285,7 @@ const Home: React.FC = () => {
                   <ProductCard
                     imageSrc={kids2}
                     title="Remera"
-                    price={5200}
+                    price={"5200"}
                     brand="brand"
                   />
                 </Slide>
@@ -293,7 +293,7 @@ const Home: React.FC = () => {
                   <ProductCard
                     imageSrc={kids3}
                     title="Remera"
-                    price={3500}
+                    price={"3500"}
                     brand="brand"
                   />
                 </Slide>
@@ -301,7 +301,7 @@ const Home: React.FC = () => {
                   <ProductCard
                     imageSrc={kids4}
                     title="Remera"
-                    price={500}
+                    price={"500"}
                     brand="brand"
                   />
                 </Slide>
