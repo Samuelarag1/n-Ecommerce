@@ -6,6 +6,10 @@ import ModalAdd from "@/components/Modals/ModalAdd/index";
 import ModalConfirmDialog from "@/components/Modals/Modal";
 import { FaRegEye } from "react-icons/fa";
 import IProduct from "@/Models/Products";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
+import { MdChevronRight } from "react-icons/md";
+import { BsPencilFill, BsTrash3Fill } from "react-icons/bs";
+import { IoMdAddCircleOutline } from "react-icons/io";
 
 const ProductsPage = () => {
   const [header, setHeader] = useState("");
@@ -24,24 +28,19 @@ const ProductsPage = () => {
   const handleOnClick = () => {};
   return (
     <>
-      <div className="h-screen bg-primary text-slate-300 p-8 overflow-auto">
-        <h1 className="text-2xl mb-8 text-center text-white">Productos</h1>
-        <div className="flex  justify-center">
+      <div className="h-screen bg-primary text-slate-300">
+        {/* <h1 className="text-2xl mb-8 text-center text-white">Productos</h1> */}
+        <div className="flex justify-center">
           <button
             onClick={() => {
-              setHeader("Agregar producto");
+              setHeader("Agregar usuario");
               setShowModal(true);
             }}
           >
-            <Image
-              alt="add"
-              src="/add.png"
-              height={50}
-              width={50}
-              className="hover:cursor-pointer bg-white rounded-[1000px]"
-            />
+            <IoMdAddCircleOutline size={50} color="white" />
           </button>
         </div>
+
         <table className="w-full text-left text-black bg-slate-300 mt-2 text-xs">
           <thead>
             <tr>
@@ -63,6 +62,24 @@ const ProductsPage = () => {
                       className="bg-primary p-1 w-12 h-8 rounded-xl flex items-center justify-center"
                     >
                       <FaRegEye size={20} color="white" />
+                    </button>
+
+                    <button
+                      className="mr-2"
+                      onClick={() => {
+                        setHeader("Editar vendedor");
+                        setShowModal(true);
+                      }}
+                    >
+                      <BsPencilFill size={25} />
+                    </button>
+                    <button
+                      onClick={() => {
+                        setHeader("Borrar vendedor");
+                        setShowModalDialog(true);
+                      }}
+                    >
+                      <BsTrash3Fill size={25} />
                     </button>
                   </td>
                 </tr>

@@ -28,6 +28,8 @@ import {
   IoChevronForwardCircleSharp,
 } from "react-icons/io5";
 import Footer from "@/components/Footer";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
+import { MdChevronRight } from "react-icons/md";
 
 const Home: React.FC = () => {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -59,7 +61,19 @@ const Home: React.FC = () => {
       {/* Mobile Version */}
       <div className="lg:hidden min-h-screen">
         <Banner src={kids_banner_1} alt="Banner Hombres" />
+        <Breadcrumb
+          className="m-4 h-10 align-middle flex text-white border-s-gray-200 border-[1px] rounded-lg"
+          spacing="6px"
+          separator={<MdChevronRight color="gray" size={25} />}
+        >
+          <BreadcrumbItem className="ml-2">
+            <BreadcrumbLink href="/">Inicio</BreadcrumbLink>
+          </BreadcrumbItem>
 
+          <BreadcrumbItem isCurrentPage>
+            <BreadcrumbLink className="text-white">Niños</BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
         <CarouselProvider
           naturalSlideWidth={10}
           naturalSlideHeight={25}
@@ -82,16 +96,36 @@ const Home: React.FC = () => {
 
             <Slider className="overflow-hidden m-8">
               <Slide index={0}>
-                <ProductCard imageSrc={kids1} title="Remera" price={1500} />
+                <ProductCard
+                  imageSrc={kids1}
+                  title="Remera"
+                  price={1500}
+                  brand="brand"
+                />
               </Slide>
               <Slide index={1}>
-                <ProductCard imageSrc={kids2} title="Remera" price={5200} />
+                <ProductCard
+                  imageSrc={kids2}
+                  title="Remera"
+                  price={5200}
+                  brand="brand"
+                />
               </Slide>
               <Slide index={2}>
-                <ProductCard imageSrc={kids3} title="Remera" price={3500} />
+                <ProductCard
+                  imageSrc={kids3}
+                  title="Remera"
+                  price={3500}
+                  brand="brand"
+                />
               </Slide>
               <Slide index={3}>
-                <ProductCard imageSrc={kids4} title="Remera" price={500} />
+                <ProductCard
+                  imageSrc={kids4}
+                  title="Remera"
+                  price={500}
+                  brand="brand"
+                />
               </Slide>
             </Slider>
           </div>
@@ -121,16 +155,36 @@ const Home: React.FC = () => {
 
             <Slider className="overflow-hidden m-8">
               <Slide index={0}>
-                <ProductCard imageSrc={kids3} title="Remera" price={3500} />
+                <ProductCard
+                  imageSrc={kids3}
+                  title="Remera"
+                  price={3500}
+                  brand="brand"
+                />
               </Slide>
               <Slide index={1}>
-                <ProductCard imageSrc={kids4} title="Remera" price={500} />
+                <ProductCard
+                  imageSrc={kids4}
+                  title="Remera"
+                  price={500}
+                  brand="brand"
+                />
               </Slide>
               <Slide index={2}>
-                <ProductCard imageSrc={kids1} title="Remera" price={1500} />
+                <ProductCard
+                  imageSrc={kids1}
+                  title="Remera"
+                  price={1500}
+                  brand="brand"
+                />
               </Slide>
               <Slide index={3}>
-                <ProductCard imageSrc={kids2} title="Remera" price={5200} />
+                <ProductCard
+                  imageSrc={kids2}
+                  title="Remera"
+                  price={5200}
+                  brand="brand"
+                />
               </Slide>
             </Slider>
           </div>
@@ -162,16 +216,36 @@ const Home: React.FC = () => {
 
               <Slider className="overflow-hidden m-8">
                 <Slide index={0}>
-                  <ProductCard imageSrc={kids1} title="Remera" price={1500} />
+                  <ProductCard
+                    imageSrc={kids1}
+                    title="Remera"
+                    price={1500}
+                    brand="brand"
+                  />
                 </Slide>
                 <Slide index={1}>
-                  <ProductCard imageSrc={kids2} title="Remera" price={5200} />
+                  <ProductCard
+                    imageSrc={kids2}
+                    title="Remera"
+                    price={5200}
+                    brand="brand"
+                  />
                 </Slide>
                 <Slide index={2}>
-                  <ProductCard imageSrc={kids3} title="Remera" price={3500} />
+                  <ProductCard
+                    imageSrc={kids3}
+                    title="Remera"
+                    price={3500}
+                    brand="brand"
+                  />
                 </Slide>
                 <Slide index={3}>
-                  <ProductCard imageSrc={kids4} title="Remera" price={500} />
+                  <ProductCard
+                    imageSrc={kids4}
+                    title="Remera"
+                    price={500}
+                    brand="brand"
+                  />
                 </Slide>
               </Slider>
             </div>
@@ -200,16 +274,36 @@ const Home: React.FC = () => {
 
               <Slider className="overflow-hidden m-8">
                 <Slide index={0}>
-                  <ProductCard imageSrc={kids1} title="Remera" price={1500} />
+                  <ProductCard
+                    imageSrc={kids1}
+                    title="Remera"
+                    price={1500}
+                    brand="brand"
+                  />
                 </Slide>
                 <Slide index={1}>
-                  <ProductCard imageSrc={kids2} title="Remera" price={5200} />
+                  <ProductCard
+                    imageSrc={kids2}
+                    title="Remera"
+                    price={5200}
+                    brand="brand"
+                  />
                 </Slide>
                 <Slide index={2}>
-                  <ProductCard imageSrc={kids3} title="Remera" price={3500} />
+                  <ProductCard
+                    imageSrc={kids3}
+                    title="Remera"
+                    price={3500}
+                    brand="brand"
+                  />
                 </Slide>
                 <Slide index={3}>
-                  <ProductCard imageSrc={kids4} title="Remera" price={500} />
+                  <ProductCard
+                    imageSrc={kids4}
+                    title="Remera"
+                    price={500}
+                    brand="brand"
+                  />
                 </Slide>
               </Slider>
             </div>

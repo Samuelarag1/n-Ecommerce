@@ -24,6 +24,8 @@ import {
 } from "react-icons/io5";
 import Footer from "@/components/Footer";
 import IProduct from "@/Models/Products";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
+import { MdChevronRight } from "react-icons/md";
 
 const Home: React.FC = () => {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -66,7 +68,19 @@ const Home: React.FC = () => {
       {/* Mobile Version */}
       <div className="lg:hidden min-h-screen">
         <Banner src={banner1} alt="Banner Hombres" />
+        <Breadcrumb
+          className="m-4 h-10 align-middle flex text-white border-s-gray-200 border-[1px] rounded-lg"
+          spacing="6px"
+          separator={<MdChevronRight color="gray" size={25} />}
+        >
+          <BreadcrumbItem className="ml-2">
+            <BreadcrumbLink href="/">Inicio</BreadcrumbLink>
+          </BreadcrumbItem>
 
+          <BreadcrumbItem isCurrentPage>
+            <BreadcrumbLink className="text-white">Hombres</BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
         <CarouselProvider
           naturalSlideWidth={10}
           naturalSlideHeight={25}
