@@ -12,9 +12,9 @@ const Header: React.FC<HeaderProps> = ({ onToggle }) => {
         <Link href={"/"}>
           <header>
             <h1 className="text-xl text-white lg:text-3xl font-title">
-              Nombre
+              Importaciones
               <br />
-              <span className="ml-4 text-white">de mi tienda</span>
+              <span className="ml-4 text-white">Catamarca</span>
             </h1>
           </header>
         </Link>

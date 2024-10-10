@@ -1,36 +1,35 @@
 // pages/usuarios.tsx
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import ModalAdd from "@/components/Modals/ModalAdd/index";
 import ModalConfirmDialog from "@/components/Modals/Modal";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
+import { MdChevronRight } from "react-icons/md";
+import Header from "@/components/Header";
+import Sidebar from "@/components/Sidebar";
+import { IoMdAddCircleOutline } from "react-icons/io";
+import { BsPencilFill, BsTrash3Fill } from "react-icons/bs";
 
-const UsuariosPage = () => {
+const UsersPage = () => {
   const [header, setHeader] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [showModalDialog, setShowModalDialog] = useState(false);
-
+  const [toggle, setToggle] = useState<boolean>(false);
 
   return (
     <>
-      <div className="h-screen bg-primary text-slate-300 p-8 ">
-        <h1 className="text-2xl mb-8 text-center">Usuarios</h1>
-        <div className="flex  justify-center">
+      <div className="h-screen bg-primary text-slate-300">
+        <div className="flex justify-center">
           <button
             onClick={() => {
               setHeader("Agregar usuario");
               setShowModal(true);
             }}
           >
-            <Image
-              alt="add"
-              src="/add.png"
-              height={50}
-              width={50}
-              className="hover:cursor-pointer bg-white rounded-[1000px]"
-            />
+            <IoMdAddCircleOutline size={50} color="white" />
           </button>
         </div>
+
         <table className="w-full text-left text-black bg-slate-300 mt-2 text-xs">
           <thead>
             <tr>
@@ -57,13 +56,7 @@ const UsuariosPage = () => {
                       setShowModal(true);
                     }}
                   >
-                    <Image
-                      alt="add"
-                      src="/edit.png"
-                      height={20}
-                      width={20}
-                      className="hover:cursor-pointer"
-                    />
+                    <BsPencilFill size={25} />
                   </button>
                   <button
                     onClick={() => {
@@ -71,13 +64,7 @@ const UsuariosPage = () => {
                       setShowModalDialog(true);
                     }}
                   >
-                    <Image
-                      alt="delete"
-                      src="/trash.png"
-                      height={20}
-                      width={20}
-                      className="hover:cursor-pointer"
-                    />
+                    <BsTrash3Fill size={25} />
                   </button>
                 </div>
               </td>
@@ -104,8 +91,10 @@ const UsuariosPage = () => {
           </div>
         </>
       )}
+
+      <Sidebar isOpen={toggle} onClose={() => setToggle(false)} />
     </>
   );
 };
 
-export default UsuariosPage;
+export default UsersPage;
